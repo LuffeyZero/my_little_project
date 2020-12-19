@@ -24,6 +24,33 @@ public class Leetcode_48 {
      * @param matrix
      */
     public void rotate(int[][] matrix) {
+        int zong = matrix.length;
+        for (int i = 0; i < zong; i++) {
+            for (int j = 0; j < zong; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
 
+        for (int n = 0; n < zong; n++) {
+            for (int x = 0; x < zong / 2; x++) {
+                int temp=matrix[n][x];
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+        int[][] matrix = new int[3][3];
+        matrix[0][0] = 1;
+        matrix[0][1] = 2;
+        matrix[0][2] = 3;
+        matrix[1][0] = 4;
+        matrix[1][1] = 5;
+        matrix[1][2] = 6;
+        matrix[2][0] = 7;
+        matrix[2][1] = 8;
+        matrix[2][2] = 9;
     }
 }
